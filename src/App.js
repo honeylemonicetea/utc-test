@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import PopUpWindow from './components/calculate';
+ 
 
 function App() {
+  let [popUpState, setPopUpState] = useState("closed")
+  
+  let openPopUp = ()=>{
+    setPopUpState("open")
+  
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <button className='calculate-button' onClick={openPopUp}>Расчет платежей</button>
+        <PopUpWindow popUpState={popUpState} setPopUpState={setPopUpState}></PopUpWindow>
+        
     </div>
   );
 }

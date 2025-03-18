@@ -1,0 +1,151 @@
+.pop-up{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+    .closed{
+        display: none;
+    }
+    .open{
+        display: flex;
+    }
+
+.pop-up-container{
+    width: 30%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pop-up-close{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 27px;
+    top: 27px;
+}
+
+
+
+ 
+
+
+
+.pop-up-text{
+    color: #808080;
+}
+.pop-up-input, .pop-up-add{
+    display: block;
+    width: 100%;
+}
+.pop-up-input{
+    padding: 8px 10px;
+    border-radius: 3px;
+    border: 1px solid #DFE3E6;
+}
+
+.pop-up-calculate{
+    color: #EA0029;
+    background-color: transparent;
+    border: none;
+    margin: 8px 0 16px;
+}
+
+.months-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    margin-bottom: 47px;
+}
+
+.month-buttons{
+    display: flex;
+    gap: 8px;
+}
+.total-buttons{
+    display: flex;
+    gap: 6px;
+    margin: 11px 0 31px;
+}
+
+.month-buttons button, .total-buttons button{
+    color: black;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    line-height: 1.7rem;
+    transition: 0.5s;
+}
+
+.month-buttons .button-active, .total-buttons .button-active{
+    background-image: var(--red-gradient);
+    color: white;
+}
+
+.month-buttons button:hover, .total-buttons button:hover{
+    background-color: #DFE3E6;
+}
+.month-buttons .button-active:hover, .total-buttons .button-active:hover{
+    background-color: #EA0029;
+}
+
+
+.pop-up-add{
+    padding: 16px 0;
+    color: white;
+    background-image: var(--red-gradient);
+    margin-top: auto;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 24px #ea002954;
+}
+
+.pop-up-add:hover{
+    
+}
+/* TOTAL */
+
+.total-sum{
+    font-size: 1.7rem;
+    margin-bottom: 49px;
+}
+
+
+
+@media(max-width:1200px){
+    .pop-up-container{
+        width: 45%;
+    }
+}
+
+
+@media(max-width:768px){
+    .pop-up-container{
+        width: 59%;
+    }
+}
+
+@media(max-width:560px){
+    .pop-up-container{
+        width: 79%;
+    }
+}
+
+
+@media(max-width:430px){
+    .pop-up-container{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
